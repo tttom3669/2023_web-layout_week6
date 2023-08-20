@@ -1,0 +1,19 @@
+// google font settings
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700&family=Yeseva+One&display=swap');
+
+// bootstrap
+@import '../../node_modules/bootstrap/scss/functions';
+@import './utils/variables';
+@import '../../node_modules/bootstrap';
+
+// custom
+@import './utils/maps.scss';
+@import './utils/utilities.scss';
+
+
+// layout
+@import './layout/header.scss';
+@import './layout/footer.scss';
+
+// page
+@import './pages/index.scss';

@@ -1,0 +1,5 @@
+@each $key,$value  in $cus-font-family{
+    .font-#{$key}{
+        font-family: $value !important;
+    }
+}
