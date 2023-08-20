@@ -1,4 +1,11 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo{
+  height: 53px ;
+  width: 53px ;
+  @include md{
+    height: 40px;
+    width: 40px;
+  }
+}
+.nav-search{
+  max-width: 207px;
 }
