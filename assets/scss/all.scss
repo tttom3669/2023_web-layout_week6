@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700&family=Yeseva+One&display=swap');
 // icofont
 @import '../../node_modules/icofont/dist/icofont.min.css';
+// import Swiper styles
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+
 
 // bootstrap
 @import '../../node_modules/bootstrap/scss/functions';
@@ -10,8 +14,8 @@
 
 // custom
 @import './utils/maps.scss';
-@import './utils/utilities.scss';
 @import './utils/mixins';
+@import './utils/utilities.scss';
 
 
 // layout
