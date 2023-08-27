@@ -8,3 +8,17 @@
 .fs-18px{
     font-size: 18px;
 }
+
+@include md{
+    .fs-md-18px{
+        font-size: 18px !important; 
+    }
+    
+    .fs-md-14px{
+        font-size: 14px !important;
+    }
+}
+
+.mb-175px{
+    margin-bottom: 175px;
+}
