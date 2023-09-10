@@ -36,10 +36,18 @@
 }
 
 .online-tag {
-  border-width: 1px 1px 1px 3px;
+  border-width: 1px 1px 1px 4px;
   border-color: $primary;
   border-style: solid;
   padding: 4px 24px;
+  transition: all ease .5s;
+  &:hover{
+    background-color: $primary;
+    border-color: $secondary;
+    a{
+      color: $white;
+    }
+  }
 }
 
 .swiper {
@@ -65,10 +73,14 @@
   }
   li {
     &:nth-child(2n) {
-      transform: rotate(2deg);
+      div{
+        transform: rotate(2deg);
+      }
     }
     &:nth-child(3) {
-      transform: rotate(-2deg);
+      div{
+        transform: rotate(-2deg);
+      }
     }
   }
   .item {
@@ -109,4 +121,30 @@
   width: 32px;
   height: 32px;
   margin-right: 24px;
+}
+
+.btn-primary{
+  &:hover{
+    span,i{
+      color: $secondary;
+    }
+  }
+  &:disabled{
+    background: #9A9A9A;
+    color: #EBEAE3;
+  }
+}
+
+.card-body{
+  transition: all ease .5s;
+  a{
+    svg{
+      opacity: 0;
+    }
+  }
+  a:hover{
+    svg{
+      opacity: 1;
+    }
+  }
 }

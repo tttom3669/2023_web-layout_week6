@@ -22,3 +22,9 @@
 .mb-175px{
     margin-bottom: 175px;
 }
+
+@media (min-width:992px) {
+    .w-lg-100{
+        width: 100% !important;
+    }
+}

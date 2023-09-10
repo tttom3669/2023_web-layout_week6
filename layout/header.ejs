@@ -1,9 +1,22 @@
+<style>
+  .cus-navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease 0.5s;
+  }
+  .cus-navbar-collapse.active {
+    max-height: 300px;
+  }
+</style>
+
 <header>
   <nav
-    class="navbar navbar-expand-lg navbar-light py-md-8 py-3 border-bottom border-2 border-primary"
+    class="navbar navbar-expand-lg navbar-light py-md-8 py-3 border-bottom border-2 border-primary position-relative"
   >
     <div class="container d-flex justify-content-between">
-      <div class="d-flex justify-content-start align-items-center flex-nowrap">
+      <div
+        class="d-flex justify-content-lg-start justify-content-between align-items-center flex-nowrap w-100"
+      >
         <a
           class="navbar-brand d-flex align-items-center me-md-12 me-0"
           href="index.html"
@@ -28,19 +41,36 @@
             <i class="icofont-search-1 text-secondary"></i>
           </button>
         </form>
+        <ul
+          class="d-lg-flex d-none h-100 align-items-center list-unstyled ms-auto mb-0"
+        >
+          <li class="nav-item me-8">
+            <a class="nav-link text-primary" aria-current="page" href="#"
+              ><i class="icofont-ui-file me-1"></i>REGISTER</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="login.html"
+              ><i class="icofont-ui-user me-1"></i>LOGIN</a
+            >
+          </li>
+        </ul>
+        <button
+          class="cus-navbar-toggler navbar-toggler"
+          type="button"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+    <div
+      class="cus-navbar-collapse position-absolute w-100 top-100 mt-1 left-0 bg-base"
+      id="navbarSupportedContent"
+    >
+      <div class="container">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item me-8">
             <a class="nav-link text-primary" aria-current="page" href="#"
@@ -57,3 +87,17 @@
     </div>
   </nav>
 </header>
+
+<script>
+  const cus_toggler = document.querySelector('.cus-navbar-toggler');
+  const cus_collapse = document.querySelector('.cus-navbar-collapse');
+  cus_toggler.addEventListener('click', () => {
+    console.log(cus_toggler);
+    console.log(cus_collapse);
+    if (cus_collapse.classList.contains('active')) {
+      cus_collapse.classList.remove('active');
+    } else {
+      cus_collapse.classList.add('active');
+    }
+  });
+</script>
